@@ -1,32 +1,42 @@
-Langkah-Langkah Setelah Clone Proyek Laravel + Filament
-Misalnya kamu clone dari GitHub:
+CARA INSTALASI 
 
-git clone https://github.com/username/project-laravel-filament.git
-cd project-laravel-filament
-Setelah itu, ikuti urutan berikut:
+pertama-tama clone repository nya di terminal
 
-1. Install dependency PHP dengan Composer
-composer install
-Bukan composer update ya (itu biasanya buat upgrade versi package). Cukup install saja agar sesuai dengan versi yang ditentukan di composer.lock.
+git clone https://github.com/alifanLeywin/tugasManagement.git
 
-2. Copy file .env
-Kalau file .env belum ada, copy dari contoh:
+di htdocs xampp/mamp
 
-cp .env.example .env
-Lalu edit .env sesuai kebutuhan, terutama bagian ini:
+dan cd masuk ke project lalu code . untuk masuk ke vs code 
 
-APP_NAME="My Project"
-APP_URL=http://127.0.0.1:8000
+lalu tambahkan terminal 
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=namadb
-DB_USERNAME=root
-DB_PASSWORD=
-3. Generate APP_KEY
-php artisan key:generate
-4. Jalankan Migrasi (dan seeding jika ada)
-Jika tabel-tabel belum ada di database:
+lalu composer install 
+     composer update
+     cp .env.example .env
+     ubah di .env
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306 
+     DB_DATABASE=namadb
+     DB_USERNAME=root
+     DB_PASSWORD= (kosong kan, jika menggunakan password tambahkan saja)
 
-php artisan migrate
+lalu diterminal ketik php artisan key:generate
+                      php artisan migrate
+
+
+jika ada error tentang utf8mb4_unicode_ci ketika di migarte 
+tambahkan DB_COLLATION=utf8mb4_unicode_ci di .env di bawah DB_PASSWORD
+
+lalu php artisan migrate di terminal 
+
+lalu php artisan serve 
+
+
+
+
+
+
+
+
+
