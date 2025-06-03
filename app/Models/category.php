@@ -9,6 +9,6 @@ class category extends Model
     //
     protected $fillable = [
         'name',
-        'is_expensive', 
+        'category', 
     ];
 }
