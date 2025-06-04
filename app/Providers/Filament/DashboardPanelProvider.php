@@ -39,7 +39,7 @@ class DashboardPanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Widgets\FilamentInfoWidget::class, // Hapus atau komen baris ini untuk menghilangkan card Filament
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -54,6 +54,7 @@ class DashboardPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->brandName('Management'); // Menghapus tulisan Laravel di navbar kiri
     }
 }

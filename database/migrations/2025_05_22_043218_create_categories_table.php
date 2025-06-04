@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->enum('Categories', ['expense','income'])->default('expense');
-            $table->timestamps();
-            $table->SoftDeletes();
-        });
+    $table->id();
+    $table->string('name');
+    $table->enum('category', ['expense', 'income'])->default('expense'); // perbaiki nama kolom menjadi lowercase
+    $table->timestamps();
+    $table->softDeletes();  // kecil s pada softDeletes
+});
+
     }
 
     /**
