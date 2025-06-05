@@ -53,11 +53,11 @@ class TransactionResource extends Resource
                 Tables\Columns\TextColumn::make('transaction_date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('user_id')
-                    ->numeric()
+                Tables\Columns\TextColumn::make('category.category')
+                    ->label('Kategori (Pemasukan/Pengeluaran)')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('category_id')
-                    ->numeric()
+                 Tables\Columns\TextColumn::make('category.name')
+                    ->label('Nama Kategori')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

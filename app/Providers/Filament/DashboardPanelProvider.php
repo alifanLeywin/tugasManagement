@@ -38,7 +38,10 @@ class DashboardPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
+                \App\Filament\Widgets\StatsOverview::class,
+                \App\Filament\Widgets\GrafikIncome::class,
+                \App\Filament\Widgets\GrafikExpense::class,
+                // Widgets\AccountWidget::class,
                 // Widgets\FilamentInfoWidget::class, // Hapus atau komen baris ini untuk menghilangkan card Filament
             ])
             ->middleware([
